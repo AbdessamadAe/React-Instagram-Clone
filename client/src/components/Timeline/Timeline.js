@@ -7,8 +7,6 @@ function Timeline() {
       <div className="wrapper">
       <div class="left-col">
       <Post />
-      <Post />
-      <Post />
       </div>
       </div>
     </div>
