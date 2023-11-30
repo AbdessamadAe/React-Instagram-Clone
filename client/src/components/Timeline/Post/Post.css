@@ -1,0 +1,57 @@
+.post{
+    padding: 20px 0;
+    border: 1px solid rgb(var(--ig-separator));
+    border-radius: 3px;
+    margin-bottom: 20px; ;
+}
+.post-image {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0;
+    margin-top: -50px;
+}
+.user__info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+.username {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0px;
+}
+.user__avatar{
+    margin-right: 15px;
+    font-size: 25px;
+}
+.reaction-icon {
+    margin-right: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.reaction-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.likes {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0px;
+    margin-left: 10px;
+}
