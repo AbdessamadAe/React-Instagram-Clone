@@ -6,6 +6,9 @@ import { FaRegComment } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
 import { FcLike } from "react-icons/fc";
 import { AiOutlineSmile } from "react-icons/ai";
+import { use } from "express/lib/router";
+
+//post_id, post_date , picture, caption, account_id, likes
 
 function Post({ post }) {
   const [showComments, setShowComments] = useState(false);
@@ -16,12 +19,10 @@ function Post({ post }) {
   const likePost = useCallback(() => {
     setNumberOfLikes((numberOfLikes) => numberOfLikes + 1);
     setLiked(true);
-    // TODO: Actual database write
   }, []);
   const unlikePost = useCallback(() => {
     setNumberOfLikes((numberOfLikes) => numberOfLikes - 1);
     setLiked(false);
-    // TODO: Actual database write
   }, []);
 
   return (
@@ -30,9 +31,9 @@ function Post({ post }) {
         <div className="user__avatar">
           <FaRegCircleUser />
         </div>
-        <p class="username">{post.user}</p>
+        <p class="username">{post.user_name}</p>
       </div>
-      <img class="post-image" src={post.image} alt="post" />
+      <img class="post-image" src={post.picture} alt="post" />
       <div class="post-content">
         <div class="reaction-wrapper">
           <div class="reaction-icon">

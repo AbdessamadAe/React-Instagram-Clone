@@ -8,13 +8,14 @@ const pool = new Pool({
 })
 
 const getPosts = (request, response) => {
-  pool.query('SELECT * FROM  post', (error, results) => {
+  pool.query('SELECT post.*, a.user_name FROM  post NATURAL JOIN account a', (error, results) => {
     if (error) {
       throw error
     }
     response.status(200).json(results.rows)
   })
 }
+
 
 const createPost = (request, response) => {
   const { post_id, post_date , picture, caption, account_id, likes } = request.body
